@@ -1,0 +1,110 @@
+.about{
+    min-height: 50vh;
+    padding: 10rem 5% 4rem;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 5rem;
+    color: var(--white-text-color);
+    background-color: #080810;
+    background-image: 
+        radial-gradient(at 47% 33%, hsl(240.00, 33%, 5%) 0, transparent 59%), 
+        radial-gradient(at 82% 65%, hsl(356.27, 75%, 57.99999999999999%) 0, transparent 55%);
+}
+
+.about-content{
+    width: 50%;
+}
+
+.heading{
+    font-size: 10rem;
+    font-weight: 100;
+    color: var(--main-color);
+    margin-bottom: 4rem;
+}
+
+.about-content p{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 100;
+}
+
+.about-img{
+    width: 50%;
+    overflow: hidden;
+    padding-left: 7rem;
+
+}
+
+/* Embla Carousel Styles */
+.image-container {
+    display: flex;
+}
+
+.image-slide {
+    min-width:100%; 
+    position: relative;
+    cursor: pointer;
+}
+
+.carousel-img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* Tablet View */
+@media (max-width: 992px) {
+    .about {
+        flex-direction: column; /* Stacks the content vertically */
+        gap: 3rem;
+        padding: 5rem 5%;
+    }
+
+    .about-content {
+        width: 100%; /* Make content and image full width */
+        text-align: left; /* Center the text on smaller screens */
+    }
+
+    .heading {
+        font-size: 8rem; /* Reduce font size for headings on tablets */
+    }
+
+    .about-img {
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+        margin-top: 2rem;
+    }
+
+    .about-content p {
+        font-size: 1.8rem; /* Slightly smaller font size */
+        line-height: 2.2rem;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .about {
+        padding: 2rem 6%;
+        gap: 3rem;
+    }
+
+    .heading {
+        font-size: 6rem; /* Reduce heading font size further */
+        margin-bottom: 2rem;
+        font-weight: 400;
+    }
+
+    .about-content p {
+        font-size: 1.8rem; /* Further adjust paragraph font size */
+        line-height: 2.5rem;
+    }
+
+    .about-img img {
+        width: 300px; /* Smaller image size on mobile */
+        height: 300px;
+    }
+}

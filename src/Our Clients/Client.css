@@ -1,0 +1,125 @@
+.client{
+    padding: 8rem 5% 4rem;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    /* align-items: center; */
+    background-color: #080810;
+    opacity: 1;
+    background-image: radial-gradient(#e4434d 2px, #080810 2px);
+    background-size: 70px 70px;
+    position: relative;
+}
+
+.client-header{
+    text-align: center;
+}
+
+.client-header h2{
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 5.5rem;
+    line-height: 1.1;
+    color: var(--white-text-color);
+}
+
+.client span{
+    color: var(--main-color);
+  }
+
+  .client::before {
+    content: 'Happy clients,Happy us';
+    position: absolute;
+    top: 25%;
+    left: 60%; 
+    transform: translateX(-50%) rotate(-10deg);
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: var(--white-text-color);
+    opacity: 0.5;
+    z-index: 0;
+    font-family: cursive;
+}
+
+
+.client-upper,.client-lower{
+    display: flex;
+}
+
+.upperMarque,.lowerMarque{
+    display: flex;
+}
+
+.client-logo img{
+    height: 100px;
+    width: 150px;
+    padding-right: 30px;
+    object-fit: fill(100%);
+}
+
+.MyGradient {
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
+}
+
+@media (max-width: 992px) {
+    .client{
+        padding: 6rem 5% 4rem;
+        min-height: 25vh;
+        background-size: 60px 60px;
+        gap: 4rem;
+    }
+    
+    .client::before {
+        top: 23%;
+        left: 63%; 
+    }
+
+    .client-upper,.client-lower{
+        overflow: hidden;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .client{
+        padding: 5rem 6% 0rem;
+        min-height: 50vh;
+    }
+
+    .client-header h2{
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: 5rem;
+    }
+
+    .client::before {
+        content: 'Happy clients,Happy us';
+        position: absolute;
+        top: 27%;
+        left: 50%; 
+        font-size: 6rem;
+    }
+
+
+    .client-upper,.client-lower{
+        overflow: hidden;
+    }
+
+    .MyGradient {
+        mask-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 10%, /* Adjusted mask gradient for smaller screens */
+            rgba(0, 0, 0, 1) 90%,
+            rgba(0, 0, 0, 0)
+        );
+    }
+}
+
